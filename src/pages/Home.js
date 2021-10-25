@@ -32,7 +32,7 @@ const Home = () => {
     if(githubSearchVal === '') {
       setGithubSearchResults([])
     } else {
-      let languageText = selectedLanguageFilter !== '' ? ' language='+selectedLanguageFilter : '' 
+      let languageText = selectedLanguageFilter !== '' ? '+language:'+selectedLanguageFilter : ''
       axios.get('/search/repositories', {
         params: {
           q: githubSearchVal + languageText,
